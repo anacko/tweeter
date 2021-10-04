@@ -1,0 +1,19 @@
+.footer {
+  font-family: 'Bungee', cursive;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn {
+  background-color: #4056A1;
+  color: #FFFFFF;
+}
+
+#tweet-text {
+  height: 1.8em;
+  width: 100%;
+  font-weight: 600;
+  background-color: inherit;
+  border: 0px;
+  border-bottom: 3px solid;
+}
