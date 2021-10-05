@@ -41,5 +41,6 @@
 }
 
 .tweet i:hover {
+  cursor: pointer;
   color: orange;
 }

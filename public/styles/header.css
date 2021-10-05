@@ -1,14 +1,17 @@
 .header {
-  height: 400px;
+  height: 450px;
   width: 100%;
   text-align: center;
-  
   background-color: #969ae6;
   background-image: url("https://www.transparenttextures.com/patterns/nice-snow.png");
   /* From source, please observe that link is just intended for prototyping. For production, download the pattern and re-host.*/
   
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
   
+}
+
+.header h2 {
+  margin: 10px;
 }
