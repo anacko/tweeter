@@ -9,13 +9,8 @@
   color: #FFFFFF;
 }
 
-.counter:invalid {
-  background-color: red;
-  border: 2px solid red;
-}
-
-.counter:valid {
-  background-color: blue;
+.red {
+  color: red;
 }
 
 #tweet-text {
