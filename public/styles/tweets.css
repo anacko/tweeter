@@ -1,0 +1,45 @@
+.tweet {
+  border: 3px solid;
+  padding: 20px;
+}
+
+.tweet:hover {
+  box-shadow: 4px 4px 10px #545149;
+}
+
+.tweet header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tweet header span {
+  display: flex;
+  align-items: center;
+}
+
+.tweet .handle {
+  color: lightgray;
+  font-weight: 600;
+}
+
+.tweet p {
+  font-weight: 600;
+}
+
+.tweet footer {
+  font-size: 75%;
+  padding-top: 3px;
+  border-top: 3px solid;
+  display: flex;
+  justify-content: space-between;
+}
+
+.tweet i {
+  margin-right: 15px;
+  color:#4056A1
+}
+
+.tweet i:hover {
+  color: orange;
+}
