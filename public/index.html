@@ -49,11 +49,11 @@
 
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
-        <form action="/tweets" method="POST">
+        <form id="tweet-form" action="/tweets" method="POST">
           <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
           <footer>
             <button class="btn" type="submit">Tweet</button>
-            <output name="counter" class="counter" for="tweet-text" type="number" min="135" max="150">140</output>
+            <output name="counter" class="counter" for="tweet-text">140</output>
           </footer>
         </form>
         <br>
