@@ -7,13 +7,21 @@ $(() => {
 
   // Function: Takes tweet object and returns the tweet in HTML
   const createTweetElement = function(tweetObj) {
+
+    // Safe space for the user input - prevents Cross-Site-Scripting (XSS)
+    const escape = function (str) {
+      let div = document.createElement("div");
+      div.appendChild(document.createTextNode(str));
+      return div.innerHTML;
+    };
+
     const $tweet = $(`
     <article class="tweet">
       <header>
         <span><img src=${tweetObj.user.avatars}>&nbsp${tweetObj.user.name}</span>
         <span class="user handle">${tweetObj.user.handle}</span>
       </header>
-      <p>${tweetObj.content.text}</p>
+      <p>${escape(tweetObj.content.text)}</p>
       <footer>
         <span>${timeago.format(tweetObj.created_at)}</span>
         <span><i class="fas fa-flag"></i><i class="fas fa-retweet"></i><i class="fas fa-heart"></i></span>
@@ -51,19 +59,26 @@ $(() => {
 
     const tweetSize = $('#tweet-text').val().length
     if (tweetSize === 0) {
-      window.alert("To tweet something, you have to type something!")
+      $(".new-tweet .error-msg")
+        .empty()
+        .append("Nothing typed! Did you mean to post an empty tweet?")
+        .fadeIn(1000)
     } else if (tweetSize > 140) {
-      window.alert(`Tweet oversized by ${tweetSize - 140} characters!`)
+      $(".new-tweet .error-msg")
+      .empty()
+      .append("This tweet is too long. Remember! <em>Brevity is the Soul of Wit.<em>")
+      .fadeIn(1000)
     } else {
-      
+      $(".new-tweet .error-msg")
+        .fadeOut(600)
       $.ajax({
         type: 'POST',
         url: '/tweets',
         data: $(this).serialize(),
         success: () => {
-          $(this).find('.counter').val(140)
-          $('#tweet-text').val('')
-          fetchTweets()
+          $(this).find('.counter').val(140);
+          $('#tweet-text').val('');
+          fetchTweets();
         }
       })
     
