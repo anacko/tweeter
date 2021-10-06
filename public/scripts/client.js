@@ -26,7 +26,7 @@ $(() => {
   // Function: Empties (due to new adds and subsequent requests)
   // then repopulates the container with each object in HTML form, in reverse order
   const renderTweets = function(tweetsArray) {
-    $("#tweets-container")
+    $('#tweets-container')
       .empty()
       .append( tweetsArray.map(tweetObj => createTweetElement(tweetObj)).reverse() )
     return;
@@ -35,7 +35,7 @@ $(() => {
   // Function (ajax): Renders the tweets in DB, async
   const fetchTweets = function() {
     $.ajax({
-      url: "/tweets",
+      url: '/tweets',
       success: (tweets) => {
         renderTweets(tweets);
       }
@@ -46,16 +46,27 @@ $(() => {
   fetchTweets();
 
   // New tweets:
-  $("#tweet-form").on("submit", function(event) {
+  $('#tweet-form').on('submit', function(event) {
     event.preventDefault();
-    $.ajax({
-        type: "POST",
-        url: "/tweets",
+
+    const tweetSize = $('#tweet-text').val().length
+    if (tweetSize === 0) {
+      window.alert("To tweet something, you have to type something!")
+    } else if (tweetSize > 140) {
+      window.alert(`Tweet oversized by ${tweetSize - 140} characters!`)
+    } else {
+      
+      $.ajax({
+        type: 'POST',
+        url: '/tweets',
         data: $(this).serialize(),
         success: () => {
-          $("#tweet-text").val('')
+          $(this).find('.counter').val(140)
+          $('#tweet-text').val('')
           fetchTweets()
         }
       })
+    
+    }
   });
 });
