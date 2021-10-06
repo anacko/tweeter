@@ -1,6 +1,8 @@
 .tweet {
-  border: 3px solid;
+  border: 1px solid;
+  border-radius: 10px;
   padding: 20px;
+  margin-bottom: 20px;
 }
 
 .tweet:hover {
@@ -30,7 +32,7 @@
 .tweet footer {
   font-size: 75%;
   padding-top: 3px;
-  border-top: 3px solid;
+  border-top: 1px solid;
   display: flex;
   justify-content: space-between;
 }
