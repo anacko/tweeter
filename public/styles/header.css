@@ -1,21 +1,22 @@
 .header {
-  height: 450px;
+  position: absolute;
+  top: 120px;
+  height: 300px;
   width: 100%;
   text-align: center;
   background-image: linear-gradient(#4056A1, #4056A1, #f4f1ec);
   display: flex;
   justify-content: center;
-  align-items: flex-end;
-  
+  align-items: flex-start;
 }
+/* 
 .header div {
   top: 120px;
-  height: 330px;
+  height: 400px;
   width: 100%;
   background-image: url("https://www.transparenttextures.com/patterns/nice-snow.png");
-  /* From source, please observe that link is just intended for prototyping. For production, download the pattern and re-host.*/
-}
-
+  /* From source, please observe that link is just intended for prototyping. For production, download the pattern and re-host. */
+ 
 .header h2 {
   margin: 10px;
 }

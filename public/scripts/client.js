@@ -97,6 +97,8 @@ $(() => {
     }
   });
 
+/*
   // Animates the jumping double-arrows
   $('.fa-angle-double-down').animate({left: "+=5"}.always())
+*/
 });

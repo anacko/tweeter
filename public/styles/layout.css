@@ -27,10 +27,35 @@ body {
 
 main {
   position: absolute;
-  left: 5%;
-  width: 90%;
+  top: 420px;
+  margin: 5%;
 }
+
+/* .header-and-main {
+  display: flex;
+  flex-direction: column;
+} */
 
 html {
   scroll-behavior: smooth;
+}
+
+@media screen and (min-width: 768px) {
+
+  #header {
+    background-image: linear-gradient(to right, #4056A1, #4056A1, #f4f1ec);
+    position: fixed;
+    height: 100%;
+    width: 30%;
+    top: 0;
+    left:0;
+    bottom:0;
+  }
+  
+  main {
+    margin-top: 120px;
+    position: absolute;
+    width: 60%;
+    right: 0;
+  }
 }

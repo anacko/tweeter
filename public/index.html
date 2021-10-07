@@ -33,7 +33,7 @@
 
   <body>
     <!-- Top nav bar (fixed) -->
-    <nav>
+    <nav id="#top">
       <span class="logo">tweeter</span>
       <container class="nav-right">
         <span><strong>Write</strong> a new tweet</span>
@@ -41,31 +41,37 @@
       </container>
     </nav>
 
-    <header class="header" id="header">
-      <div>
-          <img src="/images/profile-hex.png"><h2>Your Name</h2>
-      </div>
-    </header>
+    <container class="header-and-main">
 
-    <!-- Page-specific (main) content here -->
-    <main class="container">
-      <section class="new-tweet">
-        <h2>Compose Tweet</h2>
-        <form id="tweet-form" action="/tweets" method="POST">
-          <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
-          <footer>
-            <button class="btn" type="submit">Tweet</button>
-            <output class="error-msg"></output>
-            <output name="counter" class="counter" for="tweet-text">140</output>
-          </footer>
-        </form>
-      </section>
-      <br>
+      <div class="filler"></div>
 
-      <section id="tweets-container"></section>
+      <header class="header" id="header">
+        <div>
+            <img src="/images/profile-hex.png"><h2>Your Name</h2>
+        </div>
+      </header>
 
-      <a id="big-round-red-button" href="#header"><i class="fas fa-angle-double-up"></i></a>
+      <!-- Page-specific (main) content here -->
+      <main class="container">
+        <section class="new-tweet">
+          <h2>Compose Tweet</h2>
+          <form id="tweet-form" action="/tweets" method="POST">
+            <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
+            <footer>
+              <button class="btn" type="submit">Tweet</button>
+              <output class="error-msg"></output>
+              <output name="counter" class="counter" for="tweet-text">140</output>
+            </footer>
+          </form>
+        </section>
+        <br>
 
-    </main>
+        <section id="tweets-container"></section>
+
+        <a id="big-round-red-button" href="#top"><i class="fas fa-angle-double-up"></i></a>
+
+      </main>
+
+    </container>
   </body>
 </html>
