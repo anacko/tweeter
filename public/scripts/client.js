@@ -53,10 +53,21 @@ $(() => {
   // Initial setup: when the pages loads, render tweets:
   fetchTweets();
 
-  // New tweets:
+
+  // Show/hide feature to add new tweets
+  $('.nav-right').on('click', function(event) {
+    const $newTweet = $('.new-tweet')
+    if ($newTweet.is(':hidden')) {
+      $newTweet.slideDown(600)
+      $('#tweet-text').focus()
+    } else {
+      $newTweet.slideUp(600)
+    }
+  });
+
+  // Posting new tweets:
   $('#tweet-form').on('submit', function(event) {
     event.preventDefault();
-
     const tweetSize = $('#tweet-text').val().length
     if (tweetSize === 0) {
       $(".new-tweet .error-msg")
@@ -81,7 +92,9 @@ $(() => {
           fetchTweets();
         }
       })
-    
     }
   });
+
+  // Animates the jumping double-arrows
+  $('.fa-angle-double-down').animate({left: "+=5"}.always())
 });

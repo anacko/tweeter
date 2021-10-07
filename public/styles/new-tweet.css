@@ -3,6 +3,7 @@
   width: 100%;
   font-weight: 600;
   background-color: inherit;
+  outline: none;
   border: 0px;
   border-bottom: 3px solid;
 }

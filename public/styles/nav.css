@@ -20,6 +20,7 @@ nav {
 
 .nav-right {
   text-align: center;
+  display: grid;
 }
 
 .fa-angle-double-down {
