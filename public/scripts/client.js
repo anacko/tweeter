@@ -65,6 +65,8 @@ $(() => {
     }
   });
 
+  
+
   // Posting new tweets:
   $('#tweet-form').on('submit', function(event) {
     event.preventDefault();

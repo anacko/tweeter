@@ -2,7 +2,7 @@
   height: 450px;
   width: 100%;
   text-align: center;
-  background-image: linear-gradient(#4056A1, #f4f1ec);
+  background-image: linear-gradient(#4056A1, #4056A1, #f4f1ec);
   display: flex;
   justify-content: center;
   align-items: flex-end;

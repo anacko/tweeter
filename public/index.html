@@ -49,13 +49,13 @@
 
     <!-- Page-specific (main) content here -->
     <main class="container">
-      <section class="new-tweet" hidden>
+      <section class="new-tweet">
         <h2>Compose Tweet</h2>
         <form id="tweet-form" action="/tweets" method="POST">
           <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
           <footer>
             <button class="btn" type="submit">Tweet</button>
-            <output class="error-msg" hidden></output>
+            <output class="error-msg"></output>
             <output name="counter" class="counter" for="tweet-text">140</output>
           </footer>
         </form>
