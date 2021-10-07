@@ -30,3 +30,7 @@ main {
   left: 5%;
   width: 90%;
 }
+
+html {
+  scroll-behavior: smooth;
+}
