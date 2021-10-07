@@ -31,11 +31,6 @@ main {
   margin: 5%;
 }
 
-/* .header-and-main {
-  display: flex;
-  flex-direction: column;
-} */
-
 html {
   scroll-behavior: smooth;
 }
@@ -47,15 +42,16 @@ html {
     position: fixed;
     height: 100%;
     width: 30%;
-    top: 0;
+    padding: 5%;
+    top: 120px;
     left:0;
     bottom:0;
   }
   
   main {
-    margin-top: 120px;
     position: absolute;
     width: 60%;
+    top: 120px;
     right: 0;
   }
 }
