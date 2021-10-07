@@ -8,11 +8,12 @@ It presents previous posts and enables the user to make a new post, limit to 140
 
 In vertical position...
 
-!["Screenshot of new tweet in vertical screen"]()
+!["Screenshot of new tweet in vertical screen"](https://github.com/anacko/tweeter/blob/master/docs/Vertical-write-new.png)
 
 Or in a wide screen!
 
-!["Screenshot of new tweet in horizontal screen"]()
+!["Screenshot of new tweet in horizontal screen"](https://github.com/anacko/tweeter/blob/master/docs/Wide-write-new.png)
+
 
 ## Getting Started
 
